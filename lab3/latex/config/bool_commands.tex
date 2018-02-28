@@ -1,0 +1,14 @@
+% new environments
+\newenvironment{fullreport}{}{}
+\newenvironment{prelab}{}{}
+\newenvironment{data}{}{}
+
+% set conditional behaviour of environment
+\ifbool{fullreport_bool}{\AtBeginEnvironment{fullreport}{\comment}
+\AtEndEnvironment{fullreport}{\endcomment}}{}
+
+\ifbool{prelab_bool}{\AtBeginEnvironment{prelab}{\comment}%
+\AtEndEnvironment{prelab}{\endcomment}}{}
+
+\ifbool{data_bool}{\AtBeginEnvironment{data}{\comment}%
+\AtEndEnvironment{data}{\endcomment}}{}

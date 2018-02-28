@@ -1,0 +1,49 @@
+\subsection{MOSFET Threshold Voltage}
+
+We first wish to find properties of the MOSFET, these results are found in Table \ref{tab:VBB0}.
+
+By varying $V_{GS}$ we can estimate $V_T$ which is found to be: 1.58V
+
+\begin{table}[h]
+    \include{tables/VBB0}
+    \caption{MOSFET characteristics at $V_{BB}$ = 0}
+    \label{tab:VBB0}
+\end{table}
+
+For each of $V_{BB}$ = -2, -6, -10 we repeat the measurements, and these are shown in Tables below:
+
+\begin{table}[ht]
+    \include{tables/VBB2}
+    \caption{MOSFET characteristics at $V_{BB}$ = -2}
+    \label{tab:VBB2}
+\end{table}
+
+\begin{table}[ht]
+    \include{tables/VBB6}
+    \caption{MOSFET characteristics at $V_{BB}$ = -6}
+    \label{tab:VBB6}
+\end{table}
+
+\begin{table}[ht]
+    \include{tables/VBB10}
+    \caption{MOSFET characteristics at $V_{BB}$ = -10}
+    \label{tab:VBB10}
+\end{table}
+
+\subsection{Semiconductor Parameter Analyzer}
+
+See included for various data curves which are used to describe the MOSFET device.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/Graph_For_Output_Resitance.PNG}
+    \caption{Drain-to-Source current vs Gate-to-Source voltage. The markers compare the highest $V_{GS}$ to constant $V_{GS}$ and are used to find the output resistance.}
+    \label{fig:VGS_varied}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=.95\linewidth]{figures/Graph_For_Output_TransCon.PNG}
+    \caption{Drain-to-Source current vs Gate-to-Source voltage. The markers are used to find $g_m$, the MOSFET transconductance at saturation}
+    \label{fig:VGS_constant}
+\end{figure}

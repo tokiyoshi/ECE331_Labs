@@ -1,0 +1,60 @@
+\usepackage{fancyhdr} %for headers
+\usepackage[margin=1.0in]{geometry} % margin size (can change units)
+\usepackage{setspace} % setting spaces in title
+
+\usepackage{cite} % for references
+
+\usepackage{graphicx}
+
+\usepackage{floatrow} % to add side by side tables with figures
+
+\usepackage{booktabs} % adding in table support
+
+\usepackage{amssymb} % more symbols
+
+\usepackage{subcaption}
+
+\renewcommand{\textfraction}{0.05} % Allow pages full of images
+
+\renewcommand{\arraystretch}{1.3} % make tables a bit larger (vertically)
+\setlength{\tabcolsep}{10pt}	  % make the table width larger
+\newdimen\heavyrulewidth
+\newdimen\lightrulewidth
+\heavyrulewidth=.12em  %make the top rule of a table heavy
+\lightrulewidth=.05em  %and the line below the titles a bit lighter
+
+\usepackage{multirow}
+
+%% Nice lists
+\usepackage{scrextend}
+\addtokomafont{labelinglabel}{\sffamily}
+
+\usepackage{etoolbox}   % for booleans and much more
+\usepackage{verbatim}   % for the comment environment
+
+\pagenumbering{arabic}
+
+% Table float box with bottom caption, box width adjusted to content
+\newfloatcommand{capbtabbox}{table}[][\FBwidth]
+
+\usepackage[pdftex]{hyperref} %to add hyperlinks to the referenced pages for easier navigation
+
+\hypersetup{
+	colorlinks,
+	allcolors=black
+}
+
+\newcommand{\e}[1]{\times10^{#1}}
+
+\headheight = 18pt
+
+\widowpenalties 1 10000
+\raggedbottom
+
+%% Here is bool logic to turn on or off the sections we wish to have
+
+
+% setup a new booleans
+\newbool{fullreport_bool}
+\newbool{prelab_bool}
+\newbool{data_bool}

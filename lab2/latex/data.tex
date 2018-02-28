@@ -1,0 +1,67 @@
+\subsection{Characteristic as function of light intensity}
+\begin{table}[H]
+    \centering
+    \input{tables/Variac.tex}
+    \caption{Variac versus Light Intensity}
+    \label{tab:variac_data}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \input{tables/Open_Closed.tex}
+    \caption{Open Circuit Voltage and Short Circuit Current}
+    \label{tab:open_closed_data}
+\end{table}
+
+\subsection{Temperature Dependence of no-load voltage}
+
+\begin{table}[H]
+    \centering
+    \input{tables/temp_effect.tex}
+    \caption{Temperature Effect on $V_{oc}$}
+    \label{tab:temp_effect_data}
+\end{table}
+\clearpage
+\subsection{I-V characteristics of the solar cell}
+
+\begin{figure}[ht] 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.90\linewidth]{figures/DarkChar.png} 
+    \caption{Dark enclosure} 
+    \label{fig:dark} 
+    \vspace{4ex}
+  \end{subfigure}%% 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.90\linewidth]{figures/30VChar.png} 
+    \caption{Light at variac = 30V } 
+    \label{fig:30} 
+    \vspace{4ex}
+  \end{subfigure} 
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.90\linewidth]{figures/60VChar.png} 
+    \caption{Light at variac = 60V} 
+    \label{fig:60} 
+  \end{subfigure}%%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.90\linewidth]{figures/90VChar.png} 
+    \caption{Light at variac = 90V} 
+    \label{fig:90} 
+  \end{subfigure} 
+  \caption{Solar cell I-V characteristics captured in various lighting conditions}
+  \label{fig:IV} 
+\end{figure}
+
+\clearpage
+
+\subsection{Carrier life time, response time }
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.75\linewidth]{figures/carrier.png}
+    \caption{Carrier decay time, decay time indicators measured from 100\% to 37\%}
+    \label{fig:carrier}
+\end{figure}
