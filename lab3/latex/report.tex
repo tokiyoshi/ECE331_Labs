@@ -1,3 +1,67 @@
+\subsection{MOSFET Threshold Voltage}
+ The first part of this analysis was to determine the values of $I_{DS}$ and $\sqrt{I{DS}}$ and put them into a table which is below.
+ 
+ \begin{table}[h]
+    \include{tables/VBB0Labreport}
+    \caption{MOSFET characteristics at $V_{BB}$ = 0}
+    \label{tab:VBB0L}
+\end{table}
+
+\begin{table}[ht]
+    \include{tables/VBB2Labreport}
+    \caption{MOSFET characteristics at $V_{BB}$ = -2}
+    \label{tab:VBB2L}
+\end{table}
+
+\begin{table}[ht]
+    \include{tables/VBB6Labreport}
+    \caption{MOSFET characteristics at $V_{BB}$ = -6}
+    \label{tab:VBB6L}
+\end{table}
+
+\begin{table}[ht]
+    \include{tables/VBB10Labreport}
+    \caption{MOSFET characteristics at $V_{BB}$ = -10}
+    \label{tab:VBB10L}
+\end{table}
+
+From the data given we then plotted the values $\sqrt{I_{DS}}$ vs $V{GS}$ and drew a line of best fit on each of the plot point. The line was then extrapolated to 0 for us to determine the threshold voltage $V_T$.\\
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=.96\linewidth]{figures/threshold_voltage_plot.png}
+    \caption{The plot of $\sqrt{I_{DS}}$ vs $V{GS}$}
+    \label{fig:thershold}
+\end{figure}
+From the graphs we were able to determine the threshold voltage $V_T$ for each $V_{BS}$. 
+
+\begin{table}[ht]
+    \include{tables/VT}
+    \caption{Voltage Threshold at each $V_{BB}$}
+    \label{tab:VT}
+\end{table}
+As we can see the value of $V_t$ when $V_{BB} = 0$ is 0.867V, which is different to the value of $V_T$ that we found in the previous part during the experiment which is 1.58V.From this data we then plotted $V_T$ vs $V_{BS}$, and drew a curve through the points.\\
+\begin{figure}[ht]
+    \begin{subfigure}[b]{0.40\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/VT_vs_VBB.png}
+    \caption{The plot of $V_t$ vs $V{BS}$}
+    \label{fig:thers}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.40\linewidth}
+    \centering
+    \includegraphics[width=0.95\linewidth]{figures/VT_vs_VBB_EQ2.png}
+    \caption{The plot of Equation 2}
+    \label{fig:EQ2}
+    \end{subfigure}
+\end{figure}
+From the figure above we can see that the shape of the curve that we plotted with the data we obtained matched that of the shape of the curve that is created with equation 2 in the lab manual. The only difference would depend on the model parameters $\gamma$ and $\phi$.\\
+\begin{equation}
+    I_{DS} = K(V_{GS} - V_T)^2 
+\end{equation}
+
+Is equation 1, from this we know that $\sqrt{K}$ is the slope of the lines in Figure \ref{fig:thershold} we can see that the non-zero values of $V_{BS}$ do not really effect the K parameter. The only thing that is effected is the threshold voltage $V_T$.
+\clearpage
 \subsection{Semiconductor Parameter Analyzer}
 
 \subsubsection{\texorpdfstring{$I_{DS}$ vs. $V_{DS}$ Characteristics for various $V_{GS}$}{Dump to Source Current vs Voltage Characteristics for various Gate to Source Voltages}}
@@ -48,7 +112,7 @@ To find the early voltage, the saturation portion of the curves are fitted with 
 
 \clearpage
 
-To estimate the threshold voltage we graph the value of $I_{DS}$ vs. $V_{GS}$. this is shown in Figure \ref{fig:characteristic_threshold}. Due to the low number of $V_{GS}$ points which are taken, the determination of $V_T$ is a rough approximation. We approximate that it is 1V. This agrees with the found estimated value found during data collection.
+To estimate the threshold voltage we graph the value of $I_{DS}$ vs. $V_{GS}$. this is shown in Figure \ref{fig:characteristic_threshold}. Due to the low number of $V_{GS}$ points which are taken, the determination of $V_T$ is a rough approximation. We approximate that it is 1V. This agrees with the found estimated value found during data collection and during part 1, A higher number of $V_{GS}$ points taken would allow for a more accurate approximation.
 
 \begin{figure}[ht]
     \centering
