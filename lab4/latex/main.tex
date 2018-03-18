@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+
+\include{config/config}
+\include{report_details}
+\input{config/titlepage_config}
+
+%% This is a bit messy, but it allows you to hide the different configurations of the document as we need for each submission. This allows you to set a section as hidden, true means hidden.
+
+\setbool{fullreport_bool}{false}
+\setbool{prelab_bool}{true}
+\setbool{data_bool}{true}
+
+\include{config/bool_commands}
+\begin{document}
+
+% % % %  Full Report   % % % %
+
+\begin{fullreport}
+    \include{config/titlepage}
+    \section{Prelab}
+    \input{prelab}
+    \clearpage
+    \section{In-Lab Data Collection}
+    \input{data}
+    \clearpage
+    \section{Post Lab Data Analysis}
+    \input{report}
+\end{fullreport}
+
+% % % %  PreLab ONLY   % % % %
+\begin{prelab}
+    \section{Prelab}
+    \input{prelab}
+    \clearpage
+\end{prelab}
+
+% % % %  Data ONLY   % % % %
+\begin{data}
+    \section{In-Lab Data Collection}
+    \input{data}
+\end{data}
+
+
+\end{document}
